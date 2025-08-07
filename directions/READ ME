@@ -1,0 +1,28 @@
+Main page
+-With a source bar HOME | COMMON THREATS | CAREERS | CONTACT US
+-The "Security" photo will be the header background for all the pages
+Background color for all pages
+-background: #588263;
+-background: linear-gradient(to top left, #588263 0%, #453550 100%);
+-Fonts will be Orbitron and Roboto
+Oribitron will be used for all Main point tags (source bar, h1, h2, etc)
+Roboto will be used for P tags and less “main” text. 
+
+-I want on all the pages for the source bar to be centered under the  header photo
+-on page one, I want the “what is cyber security” to be larger than the rest of the text and  for it to be underlined with a bullet to the left centered. 
+-I want the rest of the text to be to be in the same format as below. Normal unordered list and bulleted in the center. 
+
+PAGE 2
+-For page two, I want the “common cyber threats” to be floated to the left with a boarder 
+-On page two, I also want the “cybersecurity best practice” to be floated to the right with a boarder as well. 
+-Maybe 5px boarder for both with rounded edges, make the boarder color black.
+-I want the “hacked” photo to be placed below the floated images full width across the screen 
+
+PAGE 3
+-I would like the “Cybersecurity Certifications & Careers” to be floated to the right with the photo “glasses” to be floated to the left. I would like the photo to be the same width and height as the text
+
+-For “careers in cybersecurity” I would like that section floated to the left under the “glasses” photo and I would like the photo “coding” floated to the right of this text. 
+
+-I want both of these sections and photos to be the same width to create symmetry on the page. 
+
+For the footer, I want it to be #71667A background color with white text
