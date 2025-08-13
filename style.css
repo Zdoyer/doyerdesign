@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  background-color: #588263;
+  background-image: linear-gradient(to top left, #588263 0%, #453550 100%);
+  font-family: "Roboto", sans-serif;
+  display: flex;               
+  flex-direction: column;      
+  min-height: 100vh;
+}
+
+header {
+  height: 100px;
+  width:100%;
+  padding-bottom:125px;
+  background: url(assets/images/security.jpg) center/cover no-repeat;
+}
+
+nav {
+  background: #000;
+  color: #fff;
+  width: 8in;                
+  height: 0.25in;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: .2em;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+main {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  flex: 1;                    
+}
+
+main h1, main h2 {
+  font-family: "Orbitron", sans-serif;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+article {
+  border: 5px solid rgba(255,255,255,0.85);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+figure img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.border-box {
+  border: 5px solid rgba(255,255,255,0.85);
+  border-radius: 14px;
+  padding: 1rem;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(2px);
+}
+
+.fullwidth-figure img {
+  width: 100%;
+  height: 450px;              
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.email {
+  color: lightblue;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  height: .5in;               
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Orbitron", sans-serif;
+  margin-top: 10px;
+      
+ }      
+ 
