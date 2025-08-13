@@ -3,24 +3,23 @@ body {
   background-color: #588263;
   background-image: linear-gradient(to top left, #588263 0%, #453550 100%);
   font-family: "Roboto", sans-serif;
-  display: flex;               
-  flex-direction: column;      
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
 header {
-  height: 100px;
-  width:100%;
-  padding-bottom:125px;
+  height: 100px;            
+  width: 100%;
+  padding-bottom: 125px;    
   background: url(assets/images/security.jpg) center/cover no-repeat;
 }
-
 
 
 nav {
   background: #000;
   color: #fff;
-  width: 8in;                
+  width: 8in;
   height: 0.25in;
   margin: 1rem auto;
   display: flex;
@@ -38,21 +37,16 @@ nav ul {
   padding: 0;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
+nav a { color: #fff; text-decoration: none; }
 
 
 main {
   width: min(1100px, 92%);
   margin: 0 auto;
-  flex: 1;                    
+  flex: 1; 
 }
 
-main h1, main h2 {
-  font-family: "Orbitron", sans-serif;
-}
+main h1, main h2 { font-family: "Orbitron", sans-serif; }
 
 section {
   display: grid;
@@ -60,109 +54,90 @@ section {
   gap: 1rem;
 }
 
-article {
+
+article, .border-box {
   border: 5px solid rgba(255,255,255,0.85);
   border-radius: 14px;
   padding: 1rem;
-}
-
-figure img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.border-box {
-  border: 5px solid rgba(255,255,255,0.85);
-  border-radius: 14px;
-  padding: 1rem;
-  background: rgba(255,255,255,0.06);
+  background: rgba(60, 60, 60, 0.65); 
+  color: #fff;
   backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
+
+figure img { width: 100%; border-radius: 10px; }
+
 
 .fullwidth-figure img {
   width: 100%;
-  height: 450px;              
+  height: 450px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.email {
-  color: lightblue;
+.email { color: lightblue; }
+
+
+main > p, main > ul, main > ol {
+  background: rgba(60, 60, 60, 0.65);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
+
+
+h1, h2, h3, h4, h5, h6 { letter-spacing: 0.05em; }
+button, input[type="submit"], .btn { letter-spacing: 0.25em; }
+
+
+.border-box a,
+article a,
+main > p a,
+main > ul a,
+main > ol a {
+  color: #aad4ff;
+  text-underline-offset: 0.15em;
+}
+
 
 footer {
   background: #000;
   color: #fff;
-  height: .5in;               
+  height: .5in;                
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Orbitron", sans-serif;
-  margin-top: 10px;
-  letter-spacing: .4em;
-      
- }      
- 
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
-    padding: 0;
-  }
-
-  nav ul li {
-    text-align: center;
-    width: 100%;
-  }
-
-  header {
-    height: 150px;
-    background-size: cover;
-  }
-
-  main {
-    width: 95%;
-  }
-
-  section {
-    grid-template-columns: 1fr;
-  }
-
-  .border-box {
-    padding: 0.5rem;
-  }
+  margin-top: 20px;   
+  letter-spacing: .25em;          
 }
 
-@media (max-width: 600px) {
-  footer {
-    text-align: center;
-    padding: 10px;
-  }
-
-  footer p {
-    display: inline-block;
-    margin: 0;
-  }
-}
 
 @media (max-width: 768px) {
-  .nav-dots { /* replace with your actual selector */
-    display: none;
-  }
+  nav { flex-direction: column; align-items: center; width: 100%; height: auto; }
+  nav ul { flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0; }
+  nav ul li { text-align: center; width: 100%; }
+
+  header { height: 150px; background-size: cover; }
+  main { width: 95%; }
+  section { grid-template-columns: 1fr; }
+  .border-box { padding: 0.5rem; }
+
+  
+  .nav-dots { display: none; }
 }
 
 @media (min-width: 769px) {
-  .nav-dots {
-    display: inline-block; /* or your original display type */
-  }
+  .nav-dots { display: inline-block; }
+}
+
+@media (max-width: 600px) {
+  
+  footer { text-align: center; padding: 10px; }
+  footer p { display: inline-block; margin: 0; }
+
+
+  main > p, main > ul, main > ol { padding: 0.7rem 0.85rem; }
 }

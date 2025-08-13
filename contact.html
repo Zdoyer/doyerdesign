@@ -57,14 +57,35 @@
     </ul>
   </nav>
   <main>
-    <h1>Contact Us</h1>
-    <p>Have questions about cybersecurity? Send us a message directly.</p>
-    <form class="contact-form" onsubmit="sendEmail(event)">
-      <input type="text" id="message" placeholder="Type your message here" required>
-      <button type="submit">Send</button>
-    </form>
-    <p id="confirmation" style="display:none; color:white; font-family:Roboto, sans-serif;">Your message has been sent successfully!</p>
-  </main>
+  <h1>Contact Us</h1>
+  <p>Have questions about cybersecurity? Send us a message directly.</p>
+
+  <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form border-box">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+
+    <label for="heard">How did you hear about us?</label>
+    <select id="heard" name="heard">
+      <option value="search">Search Engine</option>
+      <option value="friend">Friend/Colleague</option>
+      <option value="social">Social Media</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="profession">Profession</label>
+    <input id="profession" name="profession" type="text">
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <input type="hidden" name="_subject" value="Cybersecurity Site Contact">
+
+    <button type="submit">Send</button>
+  </form>
+</main>
   <footer>
     <p>2025 Doyer Designs. All rights reserved.</p>
   </footer>
