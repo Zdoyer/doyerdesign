@@ -60,7 +60,9 @@
   <h1>Contact Us</h1>
   <p>Have questions about cybersecurity? Send us a message directly.</p>
 
-  <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form border-box">
+  <p id="formSuccess" style="display:none; color:#fff; text-align:center;">Thanks! Your message was sent.</p>
+
+  <form action="https://formspree.io/f/mdkdbypl" method="POST" class="contact-form border-box" id="contactForm">
     <label for="name">Name</label>
     <input id="name" name="name" type="text" required>
 
@@ -82,23 +84,33 @@
     <textarea id="message" name="message" rows="5" required></textarea>
 
     <input type="hidden" name="_subject" value="Cybersecurity Site Contact">
+    <input type="text" name="_gotcha" style="display:none"> 
 
     <button type="submit">Send</button>
   </form>
 </main>
-  <footer>
+
+
+<script>
+  const form = document.getElementById('contactForm');
+  const successMsg = document.getElementById('formSuccess');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const resp = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (resp.ok) {
+      form.reset();
+      successMsg.style.display = 'block';
+    } else {
+      alert('There was an issue sending your message. Please try again.');
+    }
+  });
+</script>
+ <footer>
     <p>2025 Doyer Designs. All rights reserved.</p>
   </footer>
-
-  <script>
-    function sendEmail(event) {
-      event.preventDefault();
-      const message = document.getElementById('message').value;
-      if (message.trim() !== "") {
-        document.getElementById('confirmation').style.display = 'block';
-        document.getElementById('message').value = "";
-      }
-    }
-  </script>
 </body>
 </html>
